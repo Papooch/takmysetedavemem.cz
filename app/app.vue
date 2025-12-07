@@ -55,44 +55,79 @@
       gap="0.5"
     >
       <PageSection
-        :title="t('sections.schedule')"
+        :title="t('sections.schedule.title')"
       >
-        {{ t('misc.toBeAdded') }}
+        <p>{{ t('sections.schedule.content') }}</p>
       </PageSection>
-
-      <PageSection :title="t('sections.confirmation')">
-        {{ t('misc.toBeAdded') }}
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="1"
+      >
+        <hr>
+      </PSpacer>
+      <PageSection :title="t('sections.confirmation.title')">
+        <p>{{ t('sections.confirmation.content1') }}</p>
+        <p>{{ t('sections.confirmation.content2') }}</p>
+        <p>{{ t('sections.confirmation.content3') }}</p>
       </PageSection>
-
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="1"
+      >
+        <hr>
+      </PSpacer>
       <PageSection
         id="arrival"
-        :title="t('sections.arrival')"
+        :title="t('sections.arrival.title')"
         image-src="/svg/pig-walking.svg"
       >
-        {{ t('misc.toBeAdded') }}
+        <p>{{ t('sections.arrival.content1') }}</p>
+        <p>{{ t('sections.arrival.content2') }}</p>
       </PageSection>
-
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="1"
+      >
+        <hr>
+      </PSpacer>
       <PageSection
         id="accommodation"
-        :title="t('sections.accommodation')"
+        :title="t('sections.accommodation.title')"
         image-position="left"
         image-src="/svg/pig-sleeping.svg"
       >
-        {{ t('misc.toBeAdded') }}
+        <p>{{ t('sections.accommodation.content1') }}</p>
+        <p>{{ t('sections.accommodation.content2') }}</p>
+        <p>{{ t('sections.accommodation.content3') }}</p>
       </PageSection>
-
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="1"
+      >
+        <hr>
+      </PSpacer>
       <PageSection
         id="dressCode"
-        :title="t('sections.dressCode')"
+        :title="t('sections.dressCode.title')"
       >
-        {{ t('misc.toBeAdded') }}
+        <p>{{ t('sections.dressCode.content') }}</p>
       </PageSection>
-
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="1"
+      >
+        <hr>
+      </PSpacer>
       <PageSection
         id="gifts"
-        :title="t('sections.gifts')"
+        :title="t('sections.gifts.title')"
       >
-        {{ t('misc.toBeAdded') }}
+        <p>{{ t('sections.gifts.content') }}</p>
       </PageSection>
     </PColumn>
   </NuxtLayout>

@@ -9,6 +9,7 @@
       <PRow
         v-if="imagePosition === 'left' "
         justify="center"
+        gap="2"
       >
         <img
           v-if="imageSrc"
@@ -22,6 +23,7 @@
       <PRow
         v-else
         justify="center"
+        gap="2"
       >
         <div class="content">
           <slot />
@@ -56,8 +58,8 @@ section {
 
 .content {
   width: 80%;
-  text-align: justify;
-  text-align-last: center;
+  text-align: left;
+  /* text-align-last: center; */
 
 }
 </style>
