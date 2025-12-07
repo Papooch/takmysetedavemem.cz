@@ -1,0 +1,2 @@
+This file is required to disable Jekyll processing on GitHub Pages sites.
+Otherwise, files and directories that start with an underscore (\_) would be ignored.
