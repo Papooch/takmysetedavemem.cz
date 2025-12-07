@@ -1,5 +1,11 @@
 <template>
   <NuxtLayout>
+    <PRow
+      justify="right"
+      alignment="top"
+    >
+      <LanguageSwitcher style="margin-bottom: -10rem;" />
+    </PRow>
     <PColumn
       gap="1"
       alignment="center"
@@ -22,11 +28,12 @@
         gap="1"
       >
         <PSpacer><hr></PSpacer>
-        Ondřášek Švanda a Verunka Baršová
+        Ondřášek Švanda {{ t("misc.and") }} Verunka Baršová
         <PSpacer><hr></PSpacer>
       </PRow>
       <div class="title-container">
-        <h1>Tak&nbsp;my&nbsp;se&nbsp;teda vemem,&nbsp;no...</h1>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <h1 v-html="t('intro.soWellGetMarriedThen')" />
       </div>
     </PColumn>
     <PSpacer height="1" />
@@ -34,9 +41,9 @@
       alignment="center"
       gap="0"
     >
-      <div>v sobotu 11. července 2026</div>
-      <div>na Chatě Babí lom</div>
-      <div>Někdy dopoledne</div>
+      <div>{{ t("intro.date") }}</div>
+      <div>{{ t("intro.where") }}</div>
+      <div>{{ t("intro.time") }}</div>
     </PColumn>
 
     <PSpacer height="2" />
@@ -44,43 +51,44 @@
     <PSpacer height="2" />
 
     <PColumn alignment="center">
-      <h2 id="harmonogram">
-        Harmonogram
+      <h2 id="schedule">
+        {{ t('sections.schedule') }}
       </h2>
-      <div> ... bude doplněno ... </div>
+      <div> {{ t('misc.toBeAdded') }} </div>
       <PSpacer>------</PSpacer>
-      <h2 id="potvrzeni">
-        Potvrzení účasti
+      <h2 id="confirmation">
+        {{ t('sections.confirmation') }}
       </h2>
-      <div> ... bude doplněno ... </div>
+      <div> {{ t('misc.toBeAdded') }} </div>
       <PSpacer>------</PSpacer>
-      <h2 id="prijezd">
-        Příjezd a doprava
+      <h2 id="arrival">
+        {{ t('sections.arrival') }}
       </h2>
-      <div> ... bude doplněno ... </div>
+      <div> {{ t('misc.toBeAdded') }} </div>
       <PSpacer>------</PSpacer>
-      <h2 id="ubytovani">
-        Spinkání
+      <h2 id="accommodation">
+        {{ t('sections.accommodation') }}
       </h2>
-      <div> ... bude doplněno ... </div>
+      <div> {{ t('misc.toBeAdded') }} </div>
       <PSpacer>------</PSpacer>
-      <h2 id="obleceni">
-        Šatěnky a tak
+      <h2 id="dressCode">
+        {{ t('sections.dressCode') }}
       </h2>
-      <div> ... bude doplněno ... </div>
+      <div> {{ t('misc.toBeAdded') }} </div>
       <PSpacer>------</PSpacer>
-      <h2 id="darecky">
-        Dárečky
+      <h2 id="gifts">
+        {{ t('sections.gifts') }}
       </h2>
-      <div> ... bude doplněno ... </div>
+      <div> {{ t('misc.toBeAdded') }} </div>
     </PColumn>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 useSeoMeta({
-  title: "Tak my se teda vemem, no",
-  description: "Oficiální web svatebního obřadu",
+  title: t("intro.soWellGetMarriedThen"),
 });
 </script>
 

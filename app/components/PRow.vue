@@ -13,6 +13,7 @@ import { appendRemAsDefault } from "~/utils/append-rem-as-default";
 
 interface Props {
   alignment?: "top" | "center" | "bottom";
+  justify?: "left" | "center" | "right";
   gap?: string | number;
   width?: string | number;
 }
@@ -28,6 +29,9 @@ const rowClass = computed(() => {
     "align-top": props.alignment === "top",
     "align-center": props.alignment === "center",
     "align-bottom": props.alignment === "bottom",
+    "justify-left": props.justify === "left",
+    "justify-center": props.justify === "center",
+    "justify-right": props.justify === "right",
   };
 });
 </script>
@@ -48,5 +52,17 @@ div {
 
 .align-bottom {
   align-items: flex-end;
+}
+
+.justify-left {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-right {
+  justify-content: flex-end;
 }
 </style>

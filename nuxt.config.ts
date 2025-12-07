@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint"],
+  modules: ["@nuxt/eslint", "@nuxtjs/i18n"],
   ssr: true,
   devtools: { enabled: true },
   css: [
@@ -16,5 +16,20 @@ export default defineNuxtConfig({
         quotes: "double",
       },
     },
+  },
+  i18n: {
+    defaultLocale: "cz",
+    langDir: "locales",
+    locales: [
+      { code: "cz", file: "cz.ts", name: "Čeština" },
+      { code: "en", file: "en.ts", name: "English" },
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      alwaysRedirect: false,
+      fallbackLocale: "cz",
+    },
+    strategy: "no_prefix",
   },
 });
