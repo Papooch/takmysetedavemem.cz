@@ -34,7 +34,6 @@ button {
   font-size: 1rem;
   cursor: pointer;
   color: #444444;
-  font-family: "JustAnotherHand", cursive;
   padding: 0.2rem 0.5rem;
 }
 </style>

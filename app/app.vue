@@ -50,36 +50,50 @@
     <hr width="100%">
     <PSpacer height="2" />
 
-    <PColumn alignment="center">
-      <h2 id="schedule">
-        {{ t('sections.schedule') }}
-      </h2>
-      <div> {{ t('misc.toBeAdded') }} </div>
-      <PSpacer>------</PSpacer>
-      <h2 id="confirmation">
-        {{ t('sections.confirmation') }}
-      </h2>
-      <div> {{ t('misc.toBeAdded') }} </div>
-      <PSpacer>------</PSpacer>
-      <h2 id="arrival">
-        {{ t('sections.arrival') }}
-      </h2>
-      <div> {{ t('misc.toBeAdded') }} </div>
-      <PSpacer>------</PSpacer>
-      <h2 id="accommodation">
-        {{ t('sections.accommodation') }}
-      </h2>
-      <div> {{ t('misc.toBeAdded') }} </div>
-      <PSpacer>------</PSpacer>
-      <h2 id="dressCode">
-        {{ t('sections.dressCode') }}
-      </h2>
-      <div> {{ t('misc.toBeAdded') }} </div>
-      <PSpacer>------</PSpacer>
-      <h2 id="gifts">
-        {{ t('sections.gifts') }}
-      </h2>
-      <div> {{ t('misc.toBeAdded') }} </div>
+    <PColumn
+      alignment="center"
+      gap="0.5"
+    >
+      <PageSection
+        :title="t('sections.schedule')"
+      >
+        {{ t('misc.toBeAdded') }}
+      </PageSection>
+
+      <PageSection :title="t('sections.confirmation')">
+        {{ t('misc.toBeAdded') }}
+      </PageSection>
+
+      <PageSection
+        id="arrival"
+        :title="t('sections.arrival')"
+        image-src="/svg/pig-walking.svg"
+      >
+        {{ t('misc.toBeAdded') }}
+      </PageSection>
+
+      <PageSection
+        id="accommodation"
+        :title="t('sections.accommodation')"
+        image-position="left"
+        image-src="/svg/pig-sleeping.svg"
+      >
+        {{ t('misc.toBeAdded') }}
+      </PageSection>
+
+      <PageSection
+        id="dressCode"
+        :title="t('sections.dressCode')"
+      >
+        {{ t('misc.toBeAdded') }}
+      </PageSection>
+
+      <PageSection
+        id="gifts"
+        :title="t('sections.gifts')"
+      >
+        {{ t('misc.toBeAdded') }}
+      </PageSection>
     </PColumn>
   </NuxtLayout>
 </template>

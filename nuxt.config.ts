@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/eslint", "@nuxtjs/i18n"],
   ssr: true,
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
   devtools: { enabled: true },
   css: [
     "~/assets/css/reset.css",

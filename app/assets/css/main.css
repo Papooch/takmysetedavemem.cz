@@ -25,6 +25,7 @@
 body {
   background-color: #fff8e1; /* Light cream background */
   color: #444444;
+  /* TODO: change to a more readable font */
   font-family: "JustAnotherHand", cursive;
   font-size: 1.5rem;
   position: relative;
