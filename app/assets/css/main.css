@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "LemonTuesday";
+  /* In Nuxt, files in /public are served from the site root, so the correct path omits "/public" */
+  src: url("/fonts/LemonTuesday.woff2") format("woff2"),
+    url("/fonts/LemonTuesday.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
