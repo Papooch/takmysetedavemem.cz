@@ -7,3 +7,42 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "JustAnotherHand";
+  /* In Nuxt, files in /public are served from the site root, so the correct path omits "/public" */
+  src: url("/fonts/JustAnotherHand.woff2") format("woff2"),
+    url("/fonts/JustAnotherHand.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/* General Styles */
+body {
+  background-color: #fff8e1; /* Light cream background */
+  color: #444444;
+  font-family: "JustAnotherHand", cursive;
+  font-size: 1.5rem;
+}
+
+/* Fancy Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #252525;
+  font-family: "LemonTuesday", sans-serif;
+  font-weight: normal;
+  /* Disable typographic ligatures for this heading */
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "calt" 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
