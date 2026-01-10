@@ -1,14 +1,14 @@
 <template>
   <div>
     <button
-      v-if="locale !== 'cz'"
-      @click="setLocale('cz')"
+      v-if="isEn"
+      @click="$router.push('/')"
     >
       Česky
     </button>
     <button
-      v-if="locale !== 'en'"
-      @click="setLocale('en')"
+      v-if="!isEn"
+      @click="$router.push('/en')"
     >
       English
     </button>
@@ -16,15 +16,9 @@
 </template>
 
 <script setup lang="ts">
-const { setLocale, locale } = useI18n();
 const route = useRoute();
 
-// Detect language from URL parameter if supplied
-onMounted(() => {
-  if (route.query.lang === "cz" || route.query.lang === "en") {
-    setLocale(route.query.lang);
-  }
-});
+const isEn = computed(() => route.path.startsWith("/en"));
 </script>
 
 <style scoped>

@@ -6,6 +6,8 @@
       >
         {{ title }}
       </h2>
+      <PSpacer margin="0.5" />
+
       <PRow
         v-if="imagePosition === 'left' "
         justify="center"

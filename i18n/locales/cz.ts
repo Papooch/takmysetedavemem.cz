@@ -1,4 +1,4 @@
-export default {
+export const cz = {
   intro: {
     soWellGetMarriedThen: "Tak my se teda vemem, no...",
     soWellGetMarriedThenHtml: "Tak&nbsp;my&nbsp;se&nbsp;teda vemem,&nbsp;no...",

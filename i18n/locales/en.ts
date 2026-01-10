@@ -1,4 +1,6 @@
-export default {
+import type { Translations } from "..";
+
+export const en: Translations = {
   intro: {
     soWellGetMarriedThen: "So we'll get married then...",
     soWellGetMarriedThenHtml: "So&nbsp;we'll&nbsp;get married&nbsp;then...",
@@ -43,4 +45,4 @@ export default {
     and: "and",
     toBeAdded: "... will be added ...",
   },
-} satisfies typeof import("./cz").default;
+};
