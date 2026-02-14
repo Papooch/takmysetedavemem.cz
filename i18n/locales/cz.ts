@@ -12,7 +12,16 @@ export const cz = {
   sections: {
     schedule: {
       title: "Harmonogram",
-      content: "Bude doplněn",
+      contentRows: [
+        "Bude doplněn, předběžně to ale vypadá takto:",
+        "11:00 - Obřad",
+        "13:00 - Oběd formou rautu",
+        "15:00 - Káva a dortíčky, volná zábava",
+        "17:00 - Grilování",
+        "18:00 - Příjezd živé kapely a první tanec",
+        "21:00 - Pozdní občerstvení",
+        "22:00 - Konec oficiálního programu, ale zábava bude pokračovat až do rána, když nebudeme vyřvávat jak na lesy :)",
+      ],
     },
     confirmation: {
       title: "Potvrzení účasti",

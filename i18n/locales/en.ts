@@ -14,7 +14,16 @@ export const en: Translations = {
   sections: {
     schedule: {
       title: "Schedule",
-      content: "Will be added",
+      contentRows: [
+        "Will be added, but tentatively it looks like this:",
+        "11:00 - Ceremony",
+        "13:00 - Lunch buffet",
+        "15:00 - Coffee and cakes, free entertainment",
+        "17:00 - Barbecue",
+        "18:00 - Arrival of live band and first dance",
+        "21:00 - Late refreshments",
+        "22:00 - End of official program, but the party will continue until morning, unless we start shouting like in the forest :)",
+      ],
     },
     confirmation: {
       title: "Confirmation of Attendance",

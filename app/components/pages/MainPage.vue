@@ -69,7 +69,7 @@
       <PageSection
         :title="t.sections.schedule.title"
       >
-        <p>{{ t.sections.schedule.content }}</p>
+        <PMultiline :rows="t.sections.schedule.contentRows" />
       </PageSection>
       <PSpacer
         height="1"
