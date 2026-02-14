@@ -1,1 +1,0 @@
-import{d as o,x as n,z as t,A as a,y as s,_ as c}from"./BE-n-VFc.js";const _=["href"],r=o({__name:"BackToHomeButton",props:{t:{}},setup(e){return(m,u)=>(s(),n("div",null,[t("a",{href:`/${e.t.urlSuffix}`},[t("button",null,a(e.t.misc.backToHome),1)],8,_)]))}}),f=Object.assign(c(r,[["__scopeId","data-v-efe3e0e3"]]),{__name:"BackToHomeButton"});export{f as _};
