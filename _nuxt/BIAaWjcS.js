@@ -1,0 +1,1 @@
+import{_ as t}from"./D7JItGra.js";import{c as n}from"./Cc8_xd9u.js";import{d as e,E as r,y as _,F as a}from"./CiPyFz_p.js";import"./BQF0dEwb.js";import"./D3d8F-wp.js";const d=e({__name:"index",setup(c){return(m,p)=>{const o=t;return _(),r(o,{t:a(n)},null,8,["t"])}}});export{d as default};
