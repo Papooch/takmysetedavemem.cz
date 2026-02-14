@@ -70,9 +70,28 @@ export const cz = {
     passwordIsIncorrect: "Heslo není správné...",
 
     title: "Potvrzení účasti",
-    nameLabel: "Jméno a příjmení",
 
-    nothingHereYet: "Formulář zatím není připraven, ale aspoň víte, že máte správné heslo :)",
+    fields: {
+      name: "Jméno a příjmení nebo jiný identifikátor",
+      numberOfPeople: "Počet osob (včetně vás), které potvrzujete",
+      contact: "Kontakt (e-mail nebo telefon), kde vám můžeme dát vědět v případě potřeby",
+      preferredDrink: "Preferovaný nápoj (abychom věděli, co připravit)",
+      preferredDrinkOptions: {
+        wine: "🍷 Vínečko",
+        beer: "🍺 Pivečko",
+        sliwovitz: "🥃 Slivovice",
+        cocktail: "🍹 Koktejly",
+        softDrink: "🥤 Nealko",
+      },
+      sleepover: "Chci přespávat na chatěnce",
+      sleepoverOptions: {
+        friday: "🛏️ Jen z pátku na sobotu",
+        saturday: "🛏️ Jen ze soboty na neděli",
+        both: "🛏️🛏️ Oba dva dny",
+        none: "❌ Nebudu přespávat",
+      },
+      message: "Pokud byste nám rádi něco řekli nebo popřáli, případně pokud máte nějaké alergie nebo jiné preference, o kterých bychom měli vědět, dejte nám prosím vědět zde",
+    },
   },
 
   misc: {

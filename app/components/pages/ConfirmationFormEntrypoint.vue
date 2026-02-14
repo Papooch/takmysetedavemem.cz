@@ -23,6 +23,7 @@
 
             <input
               v-model="password"
+              name="password"
               type="text"
               :placeholder="t.confirmationForm.passwordPlaceholder"
             >
@@ -69,8 +70,8 @@ const allowedHashes = new Set([
   "f1ce1f45", // "en, sleeping"
 ]);
 
-watch(password, async (newPassword) => {
-  const hashValue = await hashPassword(newPassword);
+watch(password, (newPassword) => {
+  const hashValue = hashPassword(newPassword);
   if (allowedHashes.has(hashValue)) {
     isPasswordValid.value = true;
   }
@@ -80,7 +81,7 @@ watch(password, async (newPassword) => {
   hash.value = hashValue;
 });
 
-async function hashPassword(password: string): Promise<string> {
+function hashPassword(password: string): string {
   let h = 0;
   for (let c = password.length; c--;) {
     h += password.charCodeAt(c);

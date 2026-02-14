@@ -72,9 +72,28 @@ export const en: Translations = {
     passwordIsIncorrect: "The password is not correct...",
 
     title: "Confirmation of Attendance",
-    nameLabel: "First and Last Name",
 
-    nothingHereYet: "The form is not ready yet, but at least you know you have the correct password :)",
+    fields: {
+      name: "First and Last Name or other identifier",
+      numberOfPeople: "Number of people (including you) that you are confirming",
+      contact: "Contact (email or phone) where we can reach you if needed",
+      preferredDrink: "Preferred drink (so we know what to prepare)",
+      preferredDrinkOptions: {
+        wine: "🍷 Wine",
+        beer: "🍺 Beer",
+        sliwovitz: "🥃 Spirit",
+        cocktail: "🍹 Cocktail",
+        softDrink: "🥤 Soft drink",
+      },
+      sleepover: "I want to sleep over at the cottage",
+      sleepoverOptions: {
+        friday: "🛏️ Only from Friday to Saturday",
+        saturday: "🛏️ Only from Saturday to Sunday",
+        both: "🛏️🛏️ Both days",
+        none: "❌ I won't be sleeping over",
+      },
+      message: "If you would like to tell us something or wish us something, or if you have any allergies or other preferences that we should know about, please let us know here",
+    },
   },
 
   misc: {
