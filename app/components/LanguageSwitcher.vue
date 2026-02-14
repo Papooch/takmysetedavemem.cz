@@ -1,17 +1,19 @@
 <template>
   <div>
-    <button
-      v-if="isEn"
-      @click="$router.push('/')"
-    >
-      Česky
-    </button>
-    <button
-      v-if="!isEn"
-      @click="$router.push('/en')"
-    >
-      English
-    </button>
+    <a href="/">
+      <button
+        v-if="isEn"
+      >
+        Česky
+      </button>
+    </a>
+    <a href="/en">
+      <button
+        v-if="!isEn"
+      >
+        English
+      </button>
+    </a>
   </div>
 </template>
 

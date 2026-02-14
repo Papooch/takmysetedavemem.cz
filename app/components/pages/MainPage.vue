@@ -4,7 +4,7 @@
       justify="right"
       alignment="top"
     >
-      <LanguageSwitcher style="margin-bottom: -10rem;" />
+      <LanguageSwitcher />
     </PRow>
     <PColumn
       gap="1"
@@ -25,15 +25,27 @@
       </div>
       <PRow
         alignment="center"
-        gap="1"
       >
-        <PSpacer><hr></PSpacer>
-        Ondášek Švanda {{ t.misc.and }} Verunka Baršová
-        <PSpacer><hr></PSpacer>
+        <span style="flex-grow: 1;">
+          <hr>
+        </span>
+        <span style="flex-grow: 1;">
+          <PStack
+            alignment="center"
+            justify="center"
+          >
+            <span>Ondrášek Švanda</span>
+            <span>&nbsp;{{ t.misc.and }}&nbsp;</span>
+            <span>Verunka Baršová</span>
+          </PStack>
+        </span>
+        <span style="flex-grow: 1;">
+          <hr>
+        </span>
       </PRow>
       <div class="title-container">
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <h1 v-html="t.intro.soWellGetMarriedThen" />
+        <h1 v-html="t.intro.soWellGetMarriedThenHtml" />
       </div>
     </PColumn>
     <PSpacer height="1" />
@@ -65,9 +77,15 @@
         margin="2"
       />
       <PageSection :title="t.sections.confirmation.title">
-        <p>{{ t.sections.confirmation.content1 }}</p>
-        <p>{{ t.sections.confirmation.content2 }}</p>
-        <p>{{ t.sections.confirmation.content3 }}</p>
+        <PMultiline :rows="t.sections.confirmation.contentRows" />
+        <PSpacer :margin="1" />
+        <PColumn alignment="center">
+          <a :href="`/form/${t.urlSuffix}`">
+            <button>
+              {{ t.confirmationForm.goto }}
+            </button>
+          </a>
+        </PColumn>
       </PageSection>
       <PSpacer
         height="1"
@@ -79,9 +97,15 @@
         :title="t.sections.arrival.title"
         image-src="/svg/pig-walking.svg"
       >
-        <p>{{ t.sections.arrival.content1 }}</p>
-        <p>{{ t.sections.arrival.content2 }}</p>
+        <PMultiline :rows="t.sections.arrival.contentRows" />
       </PageSection>
+      <iframe
+        style=""
+        src="https://mapy.com/s/horajohafe"
+        width="80%"
+        height="300"
+        frameborder="0"
+      />
       <PSpacer
         height="1"
         width="20%"
@@ -90,12 +114,9 @@
       <PageSection
         id="accommodation"
         :title="t.sections.accommodation.title"
-        image-position="left"
         image-src="/svg/pig-sleeping.svg"
       >
-        <p>{{ t.sections.accommodation.content1 }}</p>
-        <p>{{ t.sections.accommodation.content2 }}</p>
-        <p>{{ t.sections.accommodation.content3 }}</p>
+        <PMultiline :rows="t.sections.accommodation.contentRows" />
       </PageSection>
       <PSpacer
         height="1"
@@ -106,7 +127,7 @@
         id="dressCode"
         :title="t.sections.dressCode.title"
       >
-        <p>{{ t.sections.dressCode.content }}</p>
+        <PMultiline :rows="t.sections.dressCode.contentRows" />
       </PageSection>
       <PSpacer
         height="1"
@@ -117,8 +138,25 @@
         id="gifts"
         :title="t.sections.gifts.title"
       >
-        <p>{{ t.sections.gifts.content }}</p>
+        <PMultiline :rows="t.sections.gifts.contentRows" />
       </PageSection>
+
+      <PSpacer
+        height="10"
+        margin="2"
+      />
+      <hr width="100%">
+      <PSpacer height="2" />
+      <PColumn
+        alignment="center"
+        justify="center"
+        gap="0"
+      >
+        <div>
+          {{ `Ondrášek Švanda ${t.misc.and} Verunka Baršová` }}
+        </div>
+        <div>©2026</div>
+      </PColumn>
     </PColumn>
   </NuxtLayout>
 </template>

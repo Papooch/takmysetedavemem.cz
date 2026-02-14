@@ -8,24 +8,11 @@
       </h2>
       <PSpacer margin="0.5" />
 
-      <PRow
-        v-if="imagePosition === 'left' "
+      <PStack
         justify="center"
+        alignment="center"
         gap="2"
-      >
-        <img
-          v-if="imageSrc"
-          :src="imageSrc"
-          width="20%"
-        >
-        <div class="content">
-          <slot />
-        </div>
-      </PRow>
-      <PRow
-        v-else
-        justify="center"
-        gap="2"
+        :reverse-on-small-screen="true"
       >
         <div class="content">
           <slot />
@@ -33,9 +20,8 @@
         <img
           v-if="imageSrc"
           :src="imageSrc"
-          width="20%"
         >
-      </PRow>
+      </PStack>
     </PColumn>
   </section>
 </template>
@@ -61,7 +47,15 @@ section {
 .content {
   width: 80%;
   text-align: left;
-  /* text-align-last: center; */
+}
 
+img {
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  img {
+    width: 40%;
+  }
 }
 </style>
