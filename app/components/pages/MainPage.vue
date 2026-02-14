@@ -67,6 +67,7 @@
       gap="0.5"
     >
       <PageSection
+        id="schedule"
         :title="t.sections.schedule.title"
       >
         <PMultiline :rows="t.sections.schedule.contentRows" />
@@ -115,6 +116,7 @@
         id="accommodation"
         :title="t.sections.accommodation.title"
         image-src="/svg/pig-sleeping.svg"
+        lottie-src="/lottie/pig-sleeping.json"
       >
         <PMultiline :rows="t.sections.accommodation.contentRows" />
       </PageSection>

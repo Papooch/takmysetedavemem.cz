@@ -14,6 +14,11 @@ export default defineNuxtConfig({
     "~/assets/css/fonts.css",
     "~/assets/css/main.css",
   ],
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => tag === "lottie-player",
+    },
+  },
   compatibilityDate: "2025-07-15",
   eslint: {
     config: {

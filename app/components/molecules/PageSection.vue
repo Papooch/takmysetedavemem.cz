@@ -1,9 +1,7 @@
 <template>
   <section>
     <PColumn alignment="center">
-      <h2
-        :id="id ?? title"
-      >
+      <h2 :id="id ?? title">
         {{ title }}
       </h2>
       <PSpacer margin="0.5" />
@@ -17,10 +15,28 @@
         <div class="content">
           <slot />
         </div>
-        <img
-          v-if="imageSrc"
-          :src="imageSrc"
+        <div
+          v-if="imageSrc || lottieSrc"
+          class="img-wrapper"
         >
+          <noscript v-if="lottieSrc">
+            <img v-if="imageSrc" class="image" :src="imageSrc" />
+          </noscript>
+
+          <lottie-player
+            v-if="lottieSrc"
+            :src="lottieSrc"
+            autoplay
+            loop
+            speed="0.8"
+            class="image lottie-animation"
+          />
+          <img
+            v-else-if="imageSrc"
+            class="image"
+            :src="imageSrc"
+          >
+        </div>
       </PStack>
     </PColumn>
   </section>
@@ -31,6 +47,7 @@ defineProps<{
   title: string;
   id?: string;
   imageSrc?: string;
+  lottieSrc?: string;
   imagePosition?: "left" | "right";
 }>();
 </script>
@@ -49,12 +66,16 @@ section {
   text-align: left;
 }
 
-img {
+image {
+  width: 100%;
+}
+
+.img-wrapper {
   width: 30%;
 }
 
 @media (max-width: 768px) {
-  img {
+  .img-wrapper {
     width: 40%;
   }
 }

@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^2.0.12",
     "@nuxt/eslint": "1.11.0",
     "eslint": "^9.39.1",
     "nuxt": "^4.2.1",
