@@ -73,9 +73,11 @@ export const en: Translations = {
 
     title: "Confirmation of Attendance",
 
+    alreadySubmitted: "You've already sent us your confirmation, but of course you can update it anytime if something changes. Just fill out the form with the same name.",
+
     fields: {
       name: "First and Last Name or other identifier",
-      numberOfPeople: "Number of people (including you) that you are confirming",
+      numberOfPeople: "Number of people (including you) that you are confirming. Please write the names of other people in the message field at the bottom.",
       contact: "Contact (email or phone) where we can reach you if needed",
       preferredDrink: "Preferred drink (so we know what to prepare)",
       preferredDrinkOptions: {
@@ -83,7 +85,7 @@ export const en: Translations = {
         beer: "🍺 Beer",
         sliwovitz: "🥃 Spirit",
         cocktail: "🍹 Cocktail",
-        softDrink: "🥤 Soft drink",
+        softDrink: "🥤 Soft drinks",
       },
       sleepover: "I want to sleep over at the cottage",
       sleepoverOptions: {
@@ -92,7 +94,7 @@ export const en: Translations = {
         both: "🛏️🛏️ Both days",
         none: "❌ I won't be sleeping over",
       },
-      message: "If you would like to tell us something or wish us something, or if you have any allergies or other preferences that we should know about, please let us know here",
+      message: "If you would like to tell us something or wish us something, or if you have any allergies or other preferences that we should know about, please let us know here. Also, please provide the names of other people you are confirming.",
     },
   },
 

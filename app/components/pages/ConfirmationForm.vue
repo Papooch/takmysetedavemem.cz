@@ -9,7 +9,23 @@
     <PageSection
       :title="t.confirmationForm.title"
     >
-      <PColumn>
+      <PColumn
+        v-if="isSubmitting"
+        gap="1"
+        alignment="center"
+      >
+        <p>Odesílám formulář...</p>
+        <img src="/svg/pig-computer.svg">
+      </PColumn>
+
+      <PColumn
+        v-else
+        gap="2"
+      >
+        <p v-if="hasAlreadySubmitted">
+          {{ t.confirmationForm.alreadySubmitted }}
+        </p>
+
         <form
           @submit.prevent="submitForm"
         >
@@ -111,12 +127,16 @@ const props = defineProps<{
   sleeping: boolean;
 }>();
 
+useSeoMeta({
+  title: props.t.confirmationForm.title + " | " + props.t.intro.soWellGetMarriedThen,
+});
+
 const formLabels = props.t.confirmationForm.fields;
 
 const name = ref("");
 const numberOfPeople = ref(1);
 const contact = ref("");
-const preferredDrink = ref("");
+const preferredDrink = ref("nealko");
 const sleepover = ref(props.sleeping ? "patek,sobota" : "x");
 const message = ref("");
 
@@ -124,9 +144,45 @@ const isFormValid = computed(() => {
   return name.value.trim() !== "" && numberOfPeople.value > 0;
 });
 
-useSeoMeta({
-  title: props.t.confirmationForm.title + " | " + props.t.intro.soWellGetMarriedThen,
+const hasAlreadySubmitted = ref(false);
+onMounted(() => {
+  hasAlreadySubmitted.value = loadFormValues();
 });
+
+const isSubmitting = ref(false);
+
+function storeFormValues() {
+  const valuesToStore = {
+    name: name.value,
+    numberOfPeople: numberOfPeople.value,
+    contact: contact.value,
+    preferredDrink: preferredDrink.value,
+    sleepover: sleepover.value,
+    message: message.value,
+  };
+  localStorage.setItem("confirmationForm", JSON.stringify(valuesToStore));
+  hasAlreadySubmitted.value = true;
+}
+
+function loadFormValues() {
+  const savedValues = localStorage.getItem("confirmationForm");
+  if (savedValues) {
+    try {
+      const parsedValues = JSON.parse(savedValues);
+      name.value = parsedValues.name ?? "";
+      numberOfPeople.value = parsedValues.numberOfPeople ?? 1;
+      contact.value = parsedValues.contact ?? "";
+      preferredDrink.value = parsedValues.preferredDrink ?? "nealko";
+      sleepover.value = parsedValues.sleepover ?? (props.sleeping ? "patek,sobota" : "x");
+      message.value = parsedValues.message ?? "";
+      return true;
+    }
+    catch (error) {
+      console.error("Error parsing saved form values:", error);
+    }
+  }
+  return false;
+}
 
 async function submitForm() {
   const params = new URLSearchParams(window.location.search);
@@ -148,6 +204,7 @@ async function submitForm() {
 
   try {
     const url = "https://script.google.com/macros/s/AKfycbyWfwHR2pNtCAgkEdTNSchV8lQwenpCrk9pc2VUkZWjYooBseH_GRuDF3Vtq0xKqc6JfQ/exec";
+    isSubmitting.value = true;
     const response = await fetch(url, {
       method: "POST",
       body: formData,
@@ -155,9 +212,11 @@ async function submitForm() {
     const responseBody = await response.json() as { status: string };
     if (response.ok) {
       if (responseBody.status === "created") {
+        storeFormValues();
         return alert(`Formulář byl úspěšně odeslán. Děkujeme, ${name.value}!`);
       }
       else if (responseBody.status === "updated") {
+        storeFormValues();
         return alert(`Zaznamené odpovědi pro jméno "${name.value}" byly aktualizovány. Děkujeme!`);
       }
       else if (responseBody.status === "wrong_password") {
@@ -171,6 +230,9 @@ async function submitForm() {
   catch (error) {
     console.error("Error submitting form:", error);
     alert("Omlouváme se, ale při odesílání formuláře došlo k chybě. Zkuste to prosím znovu později.");
+  }
+  finally {
+    isSubmitting.value = false;
   }
 }
 </script>
