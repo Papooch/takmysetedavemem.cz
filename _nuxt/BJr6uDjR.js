@@ -1,0 +1,1 @@
+import{_ as t}from"./Bu4Mf8mq.js";import{c as n}from"./Bdsk-Jep.js";import{d as e,E as r,F as m,y as p}from"./Di6u_Cuf.js";import"./BlLL55HK.js";import"./CgGplqXJ.js";import"./BvL95Qj3.js";const x=e({__name:"1444758d",setup(_){return(a,s)=>{const o=t;return p(),r(o,{t:m(n),sleeping:!1},null,8,["t"])}}});export{x as default};

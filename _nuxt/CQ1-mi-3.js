@@ -1,0 +1,1 @@
+import{_ as t,x as n,y as c,S as o}from"./Di6u_Cuf.js";const s={};function a(e,r){return c(),n("section",null,[o(e.$slots,"default",{},void 0)])}const _=t(s,[["render",a],["__scopeId","data-v-847e6ced"]]);export{_ as default};
