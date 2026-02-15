@@ -4,8 +4,8 @@ export const en: Translations = {
   urlSuffix: "en",
 
   intro: {
-    soWellGetMarriedThen: "So we'll get married then...",
-    soWellGetMarriedThenHtml: "So&nbsp;we'll&nbsp;get married&nbsp;then...",
+    soWellGetMarriedThen: "So we'll get married, then...",
+    soWellGetMarriedThenHtml: "So&nbsp;we'll&nbsp;get married,&nbsp;then...",
     date: "on Saturday, July 11, 2026",
     where: "at Chata Babí lom",
     time: "Sometime in the morning",
