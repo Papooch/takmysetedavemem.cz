@@ -43,13 +43,16 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   title: string;
   id?: string;
   imageSrc?: string;
   lottieSrc?: string;
+  imageScale?: number;
   imagePosition?: "left" | "right";
 }>();
+
+const scale = computed(() => props.imageScale ?? 1);
 </script>
 
 <style scoped>
@@ -71,12 +74,12 @@ image {
 }
 
 .img-wrapper {
-  width: 30%;
+  width: calc(30% * v-bind(scale));
 }
 
 @media (max-width: 768px) {
   .img-wrapper {
-    width: 40%;
+    width: calc(40% * v-bind(scale));
   }
 }
 </style>

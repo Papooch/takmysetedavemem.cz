@@ -98,6 +98,7 @@
         :title="t.sections.arrival.title"
         image-src="/svg/pig-car.svg"
         lottie-src="/lottie/pig-car.json"
+        :image-scale="1.2"
       >
         <PMultiline :rows="t.sections.arrival.contentRows" />
       </PageSection>
@@ -118,6 +119,7 @@
         :title="t.sections.accommodation.title"
         image-src="/svg/pig-sleeping.svg"
         lottie-src="/lottie/pig-sleeping.json"
+        :image-scale="1"
       >
         <PMultiline :rows="t.sections.accommodation.contentRows" />
       </PageSection>
