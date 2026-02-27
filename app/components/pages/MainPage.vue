@@ -96,7 +96,8 @@
       <PageSection
         id="arrival"
         :title="t.sections.arrival.title"
-        image-src="/svg/pig-walking.svg"
+        image-src="/svg/pig-car.svg"
+        lottie-src="/lottie/pig-car.json"
       >
         <PMultiline :rows="t.sections.arrival.contentRows" />
       </PageSection>
