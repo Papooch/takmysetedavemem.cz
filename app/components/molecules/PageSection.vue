@@ -23,6 +23,13 @@
             <img v-if="imageSrc" class="image" :src="imageSrc" />
           </noscript>
 
+          <!-- Show fallback image while lottie is loading -->
+          <img
+            v-if="imageSrc && lottieSrc && !isLottieLoaded"
+            class="image"
+            :src="imageSrc"
+          >
+
           <lottie-player
             v-if="lottieSrc"
             :src="lottieSrc"
@@ -30,6 +37,8 @@
             loop
             speed="0.8"
             class="image lottie-animation"
+            :style="{ display: isLottieLoaded ? 'block' : 'none' }"
+            @load="isLottieLoaded = true"
           />
           <img
             v-else-if="imageSrc"
@@ -51,6 +60,8 @@ const props = defineProps<{
   imageScale?: number;
   imagePosition?: "left" | "right";
 }>();
+
+const isLottieLoaded = ref(false);
 
 const scale = computed(() => props.imageScale ?? 1);
 </script>

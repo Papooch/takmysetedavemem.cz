@@ -32,12 +32,21 @@
                   <img v-if="imageSrc" class="image" :src="imageSrc" />
                 </noscript>
 
+                <!-- Show fallback image while lottie is loading -->
+                <img
+                  v-if="imageSrc && lottieSrc && !isLottieLoaded"
+                  class="image"
+                  :src="imageSrc"
+                >
+
                 <lottie-player
                   v-if="lottieSrc"
                   ref="lottiePlayer"
                   :src="lottieSrc"
                   speed="2"
                   class="image lottie-animation"
+                  :style="{ display: isLottieLoaded ? 'block' : 'none' }"
+                  @load="isLottieLoaded = true"
                 />
                 <img
                   v-else-if="imageSrc"
@@ -80,6 +89,8 @@ const props = defineProps<{ t: Translations }>();
 
 const imageSrc = "/svg/pig-password.svg";
 const lottieSrc = "/lottie/pig-password.json";
+
+const isLottieLoaded = ref(false);
 
 const _password = ref("");
 const password = computed({
