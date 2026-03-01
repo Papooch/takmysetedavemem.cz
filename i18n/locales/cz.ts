@@ -102,5 +102,7 @@ export const cz = {
     and: "a",
     toBeAdded: "... bude doplněno ...",
     backToHome: "Zpět na úvod",
+    websiteUnderConstruction: "Stránka ve výstavbě",
+    websiteUnderConstructionText: "Naše svatební stránka je momentálně ve výstavbě. Časem se tu budou objevovat další prasátka a důležité informace, tak se sem čas od času podívejte.",
   },
 };

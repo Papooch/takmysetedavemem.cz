@@ -104,5 +104,7 @@ export const en: Translations = {
     and: "and",
     toBeAdded: "... will be added ...",
     backToHome: "Back to Home",
+    websiteUnderConstruction: "Website under construction",
+    websiteUnderConstructionText: "Our wedding website is currently under construction. More pigs and important information will appear here over time, so check back here from time to time.",
   },
 };

@@ -23,9 +23,7 @@
           alt="Pusací Prasátka"
         >
       </div>
-      <PRow
-        alignment="center"
-      >
+      <PRow alignment="center">
         <span style="flex-grow: 1;">
           <hr>
         </span>
@@ -66,6 +64,35 @@
       alignment="center"
       gap="0.5"
     >
+      <!-- Work in progress info -->
+      <div>
+        <div
+          style="
+            position: relative;
+            padding: 0rem 0.5rem;
+            border: solid black 1.2mm;
+            border-radius: 5px;
+            background-color: #fffdf4;
+          "
+        >
+          <b>{{ t.misc.websiteUnderConstruction }}</b>
+        </div>
+        <img
+          style="
+            position: relative;
+            margin-top: -3rem;
+            padding-left: 5rem;
+            z-index: -5;
+          "
+          src="/svg/pig-password.svg"
+        >
+      </div>
+      <p>{{ t.misc.websiteUnderConstructionText }}</p>
+
+      <PSpacer margin="2" />
+
+      <!-- Main content -->
+
       <PageSection
         id="schedule"
         :title="t.sections.schedule.title"
