@@ -13,20 +13,39 @@
             alignment="center"
             gap="1"
           >
-            {{ t.confirmationForm.passwordPrompt }}
-
-            <img
-              src="/png/card-with-password.png"
-              alt="card with password"
-              class="card-image"
-            >
-
             <input
               v-model="password"
+              style="border: solid black 1.2mm; border-radius: 5px; padding: 0rem 0rem; padding: 0rem 0.5rem;"
               name="password"
               type="text"
               :placeholder="t.confirmationForm.passwordPlaceholder"
+              @focus="lottiePlay"
+              @blur="password == '' && lottieReverse()"
             >
+
+            <div style="margin-top: -4.5rem; z-index: -1; padding-left: 5rem;">
+              <div
+                v-if="imageSrc || lottieSrc"
+                class="img-wrapper"
+              >
+                <noscript v-if="lottieSrc">
+                  <img v-if="imageSrc" class="image" :src="imageSrc" />
+                </noscript>
+
+                <lottie-player
+                  v-if="lottieSrc"
+                  ref="lottiePlayer"
+                  :src="lottieSrc"
+                  speed="2"
+                  class="image lottie-animation"
+                />
+                <img
+                  v-else-if="imageSrc"
+                  class="image"
+                  :src="imageSrc"
+                >
+              </div>
+            </div>
 
             <button
               type="submit"
@@ -38,6 +57,14 @@
             <p>
               {{ infoText }}
             </p>
+
+            {{ t.confirmationForm.passwordPrompt }}
+
+            <img
+              src="/png/card-with-password.png"
+              alt="card with password"
+              class="card-image"
+            >
           </PColumn>
         </form>
       </PageSection>
@@ -51,7 +78,16 @@ import BackToHomeButton from "../BackToHomeButton.vue";
 
 const props = defineProps<{ t: Translations }>();
 
-const password = ref("");
+const imageSrc = "/svg/pig-password.svg";
+const lottieSrc = "/lottie/pig-password.json";
+
+const _password = ref("");
+const password = computed({
+  get: () => _password.value.trim(),
+  set: (value: string) => {
+    _password.value = value.trim();
+  },
+});
 const isPasswordValid = ref(false);
 const hash = ref("");
 
@@ -70,7 +106,25 @@ const allowedHashes = new Set([
   "f1ce1f45", // "en, sleeping"
 ]);
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const lottiePlayer = ref(null as any);
+function lottiePlay() {
+  lottiePlayer.value.setDirection(1);
+  lottiePlayer.value.play();
+}
+function lottieReverse() {
+  lottiePlayer.value.setDirection(-1);
+  lottiePlayer.value.play();
+}
+
 watch(password, (newPassword) => {
+  if (newPassword === "") {
+    lottieReverse();
+  }
+  else {
+    lottiePlay();
+  }
+
   const hashValue = hashPassword(newPassword);
   if (allowedHashes.has(hashValue)) {
     isPasswordValid.value = true;
