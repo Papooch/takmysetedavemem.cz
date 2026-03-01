@@ -195,7 +195,7 @@ async function submitForm() {
     sleeping: sleepover.value,
     drink: preferredDrink.value,
     message: message.value,
-    password: password,
+    password: password.trim(),
   };
 
   // Use URLSearchParams to encode the form data as application/x-www-form-urlencoded
