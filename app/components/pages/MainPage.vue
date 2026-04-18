@@ -297,14 +297,19 @@ useHead({
     {
       key: "remove-initial-hash",
       innerHTML: `
-        const navEntries = performance.getEntriesByType("navigation");
-        const navType = navEntries.length > 0 ? navEntries[0].type : "";
-        const isReload = navType === "reload";
+        try {
+          const navEntries = performance.getEntriesByType("navigation");
+          const navType = navEntries.length > 0 ? navEntries[0].type : "";
+          const isReload = navType === "reload";
 
-        if (isReload && window.location.hash) {
-          const cleanUrl = window.location.pathname + window.location.search;
-          window.history.replaceState(null, "", cleanUrl);
-          window.scrollTo(0, 0);
+          if (isReload && window.location.hash) {
+            const cleanUrl = window.location.pathname + window.location.search;
+            window.history.replaceState(null, "", cleanUrl);
+            window.scrollTo(0, 0);
+          }
+        }
+        catch (_error) {
+          // noop: never let this helper block page rendering
         }
       `,
     },
