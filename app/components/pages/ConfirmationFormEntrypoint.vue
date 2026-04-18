@@ -94,9 +94,9 @@ const isLottieLoaded = ref(false);
 
 const _password = ref("");
 const password = computed({
-  get: () => _password.value.trim(),
+  get: () => _password.value.trim().toLowerCase(),
   set: (value: string) => {
-    _password.value = value.trim();
+    _password.value = value.trim().toLowerCase();
   },
 });
 const isPasswordValid = ref(false);
