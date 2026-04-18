@@ -116,7 +116,10 @@
         width="20%"
         margin="2"
       />
-      <PageSection :title="t.sections.confirmation.title">
+      <PageSection
+        id="confirmation"
+        :title="t.sections.confirmation.title"
+      >
         <PMultiline :rows="t.sections.confirmation.contentRows" />
         <PSpacer :margin="1" />
         <PColumn alignment="center">
@@ -178,11 +181,12 @@
         width="20%"
         margin="2"
       />
+
       <PageSection
-        id="gifts"
-        :title="t.sections.gifts.title"
+        id="witnesses"
+        :title="t.sections.witnesses.title"
       >
-        <PMultiline :rows="t.sections.gifts.contentRows" />
+        <PMultiline :rows="t.sections.witnesses.contentRows" />
       </PageSection>
       <PSpacer
         height="1"
@@ -190,10 +194,10 @@
         margin="2"
       />
       <PageSection
-        id="witnesses"
-        :title="t.sections.witnesses.title"
+        id="gifts"
+        :title="t.sections.gifts.title"
       >
-        <PMultiline :rows="t.sections.witnesses.contentRows" />
+        <PMultiline :rows="t.sections.gifts.contentRows" />
       </PageSection>
 
       <PSpacer

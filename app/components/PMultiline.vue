@@ -3,10 +3,9 @@
     :is="component"
     v-for="(row, index) in rows"
     :key="index"
-    :row="row"
     :style="index < rows.length - 1 ? { marginBottom: `${gap}rem` } : {}"
   >
-    {{ row }}
+    <PMarkdown :text="row" />
   </component>
 </template>
 
