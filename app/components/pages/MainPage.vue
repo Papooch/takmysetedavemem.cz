@@ -64,6 +64,18 @@
       alignment="center"
       gap="0.5"
     >
+      <PageSection
+        id="introduction"
+        :title="t.sections.introduction.title"
+      >
+        <PMultiline :rows="t.sections.introduction.contentRows" />
+      </PageSection>
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="2"
+      />
+
       <!-- Work in progress info -->
       <div>
         <div
@@ -171,6 +183,17 @@
         :title="t.sections.gifts.title"
       >
         <PMultiline :rows="t.sections.gifts.contentRows" />
+      </PageSection>
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="2"
+      />
+      <PageSection
+        id="witnesses"
+        :title="t.sections.witnesses.title"
+      >
+        <PMultiline :rows="t.sections.witnesses.contentRows" />
       </PageSection>
 
       <PSpacer

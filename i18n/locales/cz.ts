@@ -10,17 +10,31 @@ export const cz = {
   },
 
   sections: {
+    introduction: {
+      title: "Vítejte",
+      contentRows: [
+        "Naši milí svatebčané, vítejte na našem svatebním webu!",
+        "Je nám velkou ctí pozvat vás na naši svatbu, která přichází po téměř 11 letech našeho vztahu - ano, dali jsme si na čas, ale lepší někdy než nikdy.",
+        "Těšíme se, že s námi oslavíte tento výjimečný den plný prasátek, roztomilých chvil a dobrého jídla - co víc si v letní den přát?",
+        "Na této stránce byste měli nalézt všechny důležité informace. Prosíme vás především o potvrzení účasti. Pokud by vám nicméně nebylo cokoliv jasné, obraťte se přímo na nás, nebo v blízkosti svatby na naše svědky. (viz sekce Svědci)",
+        "Budeme se těšit!",
+        "Verunka a  Ondrášek",
+      ],
+    },
     schedule: {
       title: "Harmonogram",
       contentRows: [
         "Bude doplněn, předběžně to ale vypadá takto:",
-        "11:00 - Obřad",
-        "13:00 - Oběd formou rautu",
-        "15:00 - Káva a dortíčky, volná zábava",
+        "10:30 - Trousení hostů",
+        "11:30 - Obřad (to proč jsme tu my)",
+        "13:00 - Oběd formou rautu (to proč jste tu vy)",
+        "14:45 - Káva a dortíček",
+        "15:30 - Svatební kytinka",
+        "16:00 - Svatební kvíz",
         "17:00 - Grilování",
         "18:00 - Příjezd živé kapely a první tanec",
         "21:00 - Pozdní občerstvení",
-        "22:00 - Konec oficiálního programu, ale zábava bude pokračovat až do rána, když nebudeme vyřvávat jak na lesy :)",
+        "22:00 - Konec oficiálního programu, ale zábava bude pokračovat až do rána",
       ],
     },
     confirmation: {
@@ -28,7 +42,6 @@ export const cz = {
       contentRows: [
         "Prosíme, vypište počet osob a jednotlivá jména těch, jejichž účast potvrzujete.",
         "Kapacita chaty je poměrně omezená, proto +1, které nebyly uvedeny na obálce pozvánky, bohužel nejsou možné. Děkujeme za pochopení.",
-        "Děti máme rádi, ale pokud byste měli hlídání, možná byste si s námi svatbu užili o něco více? ",
       ],
     },
     arrival: {
@@ -56,6 +69,13 @@ export const cz = {
       title: "Dárečky",
       contentRows: [
         "Největším dárečkem je pro nás samozřejmě vaše účast. Ale kromě vás máme rádi i penízky. A rádi bychom zase vyrazili poznávat svět.",
+      ],
+    },
+    witnesses: {
+      title: "Svědkové",
+      contentRows: [
+        "Svědčit nám budou naši drazí sourozenci - Dalča a Monča. Pokud budete mít nějaké dotazy během svatebního dne nebo budete potřebovat řešit cokoliv ohledně organizace (např. že pro nás máte nějaké překvapeníčko) či jiných detailů, obracejte se, prosíme, přímo na ně.",
+        "Kontakty doplníme.",
       ],
     },
   },
@@ -103,6 +123,6 @@ export const cz = {
     toBeAdded: "... bude doplněno ...",
     backToHome: "Zpět na úvod",
     websiteUnderConstruction: "Stránka ve výstavbě",
-    websiteUnderConstructionText: "Naše svatební stránka je momentálně ve výstavbě. Časem se tu budou objevovat další prasátka a důležité informace, tak se sem čas od času podívejte.",
+    websiteUnderConstructionText: "Naše svatební stránka je stále ve výstavbě. Většina informací je již aktuální, ale časem se tu budou objevovat další prasátka a důležité detaily, tak se sem čas od času podívejte.",
   },
 };

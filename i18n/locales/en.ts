@@ -12,17 +12,30 @@ export const en: Translations = {
   },
 
   sections: {
+    introduction: {
+      title: "Welcome",
+      contentRows: [
+        "Dear wedding guests, welcome to our wedding website!",
+        "It is a great honour for us to invite you to our wedding, which comes after almost 11 years of our relationship - yes, we took our time, but better late than never.",
+        "We look forward to celebrating this special day with you, full of little pigs, adorable moments and good food - what more could you ask for on a summer's day?",
+        "On this page you should find all the important information. We ask you above all to confirm your attendance. If anything is unclear, feel free to reach out to us directly, or closer to the wedding to our witnesses. (see the Witnesses section)",
+        "We can't wait to see you!",
+        "Verunka and Ondrášek",
+      ],
+    },
     schedule: {
       title: "Schedule",
       contentRows: [
         "Will be added, but tentatively it looks like this:",
-        "11:00 - Ceremony",
-        "13:00 - Lunch buffet",
-        "15:00 - Coffee and cakes, free entertainment",
+        "10:30 - Guest arrival",
+        "11:30 - Ceremony (the reason we're here)",
+        "13:00 - Lunch buffet (the reason you're here)",
+        "15:00 - Coffee and cakes",
+        "16:00 - Wedding quiz",
         "17:00 - Barbecue",
         "18:00 - Arrival of live band and first dance",
         "21:00 - Late refreshments",
-        "22:00 - End of official program, but the party will continue until morning, unless we start shouting like in the forest :)",
+        "22:00 - End of official program, but the party will continue until morning",
       ],
     },
     confirmation: {
@@ -30,7 +43,6 @@ export const en: Translations = {
       contentRows: [
         "Please list the number of people and individual names of those whose attendance you are confirming.",
         "The cottage capacity is quite limited, therefore +1s that were not listed on the invitation envelope are unfortunately not possible. Thank you for understanding.",
-        "We love children, but if you could arrange for childcare, you might enjoy the wedding with us a bit more?",
       ],
     },
     arrival: {
@@ -58,6 +70,13 @@ export const en: Translations = {
       title: "Gifts",
       contentRows: [
         "The greatest gift is of course your attendance. But besides you, we also like money. And we'd love to explore the world again.",
+      ],
+    },
+    witnesses: {
+      title: "Witnesses",
+      contentRows: [
+        "Our witnesses will be our dear siblings - Dalča and Monča. If you have any questions during the wedding day or need to sort out anything regarding the organisation or other details, please reach out to them directly.",
+        "Contacts to be added.",
       ],
     },
   },
@@ -105,6 +124,6 @@ export const en: Translations = {
     toBeAdded: "... will be added ...",
     backToHome: "Back to Home",
     websiteUnderConstruction: "Website under construction",
-    websiteUnderConstructionText: "Our wedding website is currently under construction. More pigs and important information will appear here over time, so check back here from time to time.",
+    websiteUnderConstructionText: "Our wedding website is still under construction. Most of the information is already up to date, but more pigs and important details will appear here over time, so check back here from time to time.",
   },
 };
