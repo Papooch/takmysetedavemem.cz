@@ -1,5 +1,42 @@
 <template>
   <NuxtLayout>
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      :aria-expanded="isMobileMenuOpen"
+      aria-controls="mobile-sections-menu"
+      aria-label="Open sections menu"
+      @click="isMobileMenuOpen = !isMobileMenuOpen"
+    >
+      ☰
+    </button>
+
+    <div
+      v-if="isMobileMenuOpen"
+      class="mobile-menu-overlay"
+      @click.self="isMobileMenuOpen = false"
+    >
+      <nav
+        id="mobile-sections-menu"
+        class="mobile-menu-panel"
+      >
+        <ul class="mobile-menu-list">
+          <li
+            v-for="section in menuSections"
+            :key="`mobile-${section.id}`"
+            class="mobile-menu-item"
+          >
+            <a
+              :href="`#${section.id}`"
+              @click="isMobileMenuOpen = false"
+            >
+              {{ section.label }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <section class="hero">
       <PRow
         justify="right"
@@ -242,6 +279,7 @@
 import type { Translations } from "~~/i18n";
 
 const props = defineProps<{ t: Translations }>();
+const isMobileMenuOpen = ref(false);
 
 const menuSections = computed(() => [
   { id: "introduction", label: props.t.sections.introduction.title },
@@ -287,6 +325,57 @@ useSeoMeta({
   min-height: 3rem;
   background-color: #fffdf4;
   padding: 0.5rem 0;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 120;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: #fffdf4;
+  color: #444444;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu-panel {
+  width: min(90vw, 360px);
+  margin: 3.2rem 0 0 0.75rem;
+  background-color: #fffdf4;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+.mobile-menu-list {
+  list-style: none;
+}
+
+.mobile-menu-item + .mobile-menu-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu-item a {
+  display: block;
+  padding: 0.45rem 0;
+  color: #444444;
+  text-decoration: none;
+}
+
+.mobile-menu-item a:hover {
+  text-decoration: underline;
 }
 
 .sections-menu {
@@ -348,5 +437,23 @@ img {
   margin-bottom: -20px;
   /* border: solid red 1px; */
   margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-block;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  :deep(h2[id]) {
+    scroll-margin-top: 1rem;
+  }
 }
 </style>
