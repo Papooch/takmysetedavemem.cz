@@ -292,6 +292,25 @@ const menuSections = computed(() => [
   { id: "gifts", label: props.t.sections.gifts.title },
 ]);
 
+useHead({
+  script: [
+    {
+      key: "remove-initial-hash",
+      innerHTML: `
+        const navEntries = performance.getEntriesByType("navigation");
+        const navType = navEntries.length > 0 ? navEntries[0].type : "";
+        const isReload = navType === "reload";
+
+        if (isReload && window.location.hash) {
+          const cleanUrl = window.location.pathname + window.location.search;
+          window.history.replaceState(null, "", cleanUrl);
+          window.scrollTo(0, 0);
+        }
+      `,
+    },
+  ],
+});
+
 useSeoMeta({
   title: props.t.intro.soWellGetMarriedThen,
 });
@@ -325,6 +344,13 @@ useSeoMeta({
   min-height: 3rem;
   background-color: #fffdf4;
   padding: 0.5rem 0;
+}
+
+@supports (width: 100vi) {
+  .top-bar {
+    width: 90vi;
+    margin-left: calc(50% - 45vi);
+  }
 }
 
 .mobile-menu-toggle {
