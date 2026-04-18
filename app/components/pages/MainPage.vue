@@ -1,63 +1,81 @@
 <template>
   <NuxtLayout>
-    <PRow
-      justify="right"
-      alignment="top"
-    >
-      <LanguageSwitcher />
-    </PRow>
-    <PColumn
-      gap="1"
-      alignment="center"
-    >
-      <div class="heart-container">
-        <img
-          src="/svg/heart.svg"
-          alt="Srdce"
-          height="50rem"
-        >
-      </div>
-      <div class="pigs-container">
-        <img
-          src="/svg/pusaci-prasatka.svg"
-          alt="Pusací Prasátka"
-        >
-      </div>
-      <PRow alignment="center">
-        <span style="flex-grow: 1;">
-          <hr>
-        </span>
-        <span style="flex-grow: 1;">
-          <PStack
-            alignment="center"
-            justify="center"
-          >
-            <span>Ondrášek Švanda</span>
-            <span>&nbsp;{{ t.misc.and }}&nbsp;</span>
-            <span>Verunka Baršová</span>
-          </PStack>
-        </span>
-        <span style="flex-grow: 1;">
-          <hr>
-        </span>
+    <section class="hero">
+      <PRow
+        justify="right"
+        alignment="top"
+      >
+        <LanguageSwitcher />
       </PRow>
-      <div class="title-container">
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <h1 v-html="t.intro.soWellGetMarriedThenHtml" />
-      </div>
-    </PColumn>
-    <PSpacer height="1" />
-    <PColumn
-      alignment="center"
-      gap="0"
-    >
-      <div>{{ t.intro.date }}</div>
-      <div>{{ t.intro.where }}</div>
-      <div>{{ t.intro.time }}</div>
-    </PColumn>
 
-    <PSpacer height="2" />
-    <hr width="100%">
+      <div class="hero-center">
+        <PColumn
+          gap="1"
+          alignment="center"
+        >
+          <div class="heart-container">
+            <img
+              src="/svg/heart.svg"
+              alt="Srdce"
+              height="50rem"
+            >
+          </div>
+          <div class="pigs-container">
+            <img
+              src="/svg/pusaci-prasatka.svg"
+              alt="Pusací Prasátka"
+            >
+          </div>
+          <PRow alignment="center">
+            <span style="flex-grow: 1;">
+              <hr>
+            </span>
+            <span style="flex-grow: 1;">
+              <PStack
+                alignment="center"
+                justify="center"
+              >
+                <span>Ondrášek Švanda</span>
+                <span>&nbsp;{{ t.misc.and }}&nbsp;</span>
+                <span>Verunka Baršová</span>
+              </PStack>
+            </span>
+            <span style="flex-grow: 1;">
+              <hr>
+            </span>
+          </PRow>
+          <div class="title-container">
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <h1 v-html="t.intro.soWellGetMarriedThenHtml" />
+          </div>
+        </PColumn>
+
+        <PColumn
+          class="hero-date"
+          alignment="center"
+          gap="0"
+        >
+          <div>{{ t.intro.date }}</div>
+          <div>{{ t.intro.where }}</div>
+          <div>{{ t.intro.time }}</div>
+        </PColumn>
+      </div>
+    </section>
+
+    <div class="top-bar">
+      <nav class="sections-menu">
+        <ul class="sections-menu-list">
+          <li
+            v-for="section in menuSections"
+            :key="section.id"
+            class="sections-menu-item"
+          >
+            <a :href="`#${section.id}`">{{ section.label }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <PSpacer height="2" />
 
     <PColumn
@@ -225,12 +243,99 @@ import type { Translations } from "~~/i18n";
 
 const props = defineProps<{ t: Translations }>();
 
+const menuSections = computed(() => [
+  { id: "introduction", label: props.t.sections.introduction.title },
+  { id: "schedule", label: props.t.sections.schedule.title },
+  { id: "confirmation", label: props.t.sections.confirmation.title },
+  { id: "arrival", label: props.t.sections.arrival.title },
+  { id: "accommodation", label: props.t.sections.accommodation.title },
+  { id: "dressCode", label: props.t.sections.dressCode.title },
+  { id: "witnesses", label: props.t.sections.witnesses.title },
+  { id: "gifts", label: props.t.sections.gifts.title },
+]);
+
 useSeoMeta({
   title: props.t.intro.soWellGetMarriedThen,
 });
 </script>
 
 <style scoped>
+.hero {
+  min-height: calc(100svh - 3rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-date {
+  margin-top: 1rem;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -0.25rem;
+  min-height: 3rem;
+  background-color: #fffdf4;
+  padding: 0.5rem 0;
+}
+
+.sections-menu {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.sections-menu-list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 0;
+  white-space: nowrap;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.2rem;
+}
+
+.sections-menu-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sections-menu-item + .sections-menu-item::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.8rem;
+  background-color: black;
+  margin: 0 0.35rem;
+}
+
+.sections-menu-item a {
+  font-size: inherit;
+  color: inherit;
+  color: #444444;
+  text-decoration: none;
+}
+
+.sections-menu-item a:hover {
+  text-decoration: underline;
+}
+
+:deep(h2[id]) {
+  scroll-margin-top: 3.5rem;
+}
+
 .title-container {
   text-align: center;
 }
