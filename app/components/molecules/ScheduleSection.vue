@@ -18,13 +18,20 @@
         <div class="schedule-row">
           <div
             class="schedule-img-col"
-            :style="{ width: (7 * maxImageScale) + 'rem', minWidth: (7 * maxImageScale) + 'rem', maxWidth: (7 * maxImageScale) + 'rem' }"
+            :style="{
+              width: 7 * maxImageScale + 'rem',
+              minWidth: 7 * maxImageScale + 'rem',
+              maxWidth: 7 * maxImageScale + 'rem',
+            }"
           >
             <img
               v-if="item.image"
               :src="item.image"
               class="schedule-pig-large"
-              :style="{ height: (4.5 * (item.imageScale ?? 1)) + 'rem', maxHeight: (4.5 * (item.imageScale ?? 1)) + 'rem' }"
+              :style="{
+                height: 4.5 * (item.imageScale ?? 1) + 'rem',
+                maxHeight: 4.5 * (item.imageScale ?? 1) + 'rem',
+              }"
               alt=""
             >
           </div>
@@ -60,7 +67,7 @@ const items = [
     time: "10:30",
     text: scheduleContent.guestArrival,
     image: "/svg/pig-welcome.svg",
-    imageScale: 1,
+    imageScale: 1.2,
   },
   {
     time: "11:30",
@@ -72,12 +79,19 @@ const items = [
     time: "13:00",
     text: scheduleContent.lunch,
     image: "/svg/pig-plate.svg",
-    imageScale: 0.6,
+    imageScale: 0.8,
   },
   {
     time: "15:00",
     text: scheduleContent.cake,
     image: "/svg/pig-cake.svg",
+    imageScale: 1.1,
+  },
+  {
+    time: "15:00",
+    text: scheduleContent.flower,
+    // image: "/svg/pig-flower.svg",
+    // imageScale: 1.1,
   },
   {
     time: "16:00",
@@ -88,12 +102,13 @@ const items = [
     time: "17:00",
     text: scheduleContent.barbecue,
     image: "/svg/pig-grill.svg",
+    imageScale: 1.5,
   },
   {
     time: "18:00",
     text: scheduleContent.band,
     image: "/svg/pig-dance.svg",
-    imageScale: 1,
+    imageScale: 1.2,
   },
   {
     time: "21:00",
@@ -104,6 +119,7 @@ const items = [
     time: "22:00",
     text: scheduleContent.end,
     image: "/svg/pig-sleeping.svg",
+    imageScale: 1.1,
   },
 ];
 // Compute the maximum imageScale for all items (default 1)
@@ -115,11 +131,12 @@ const maxImageScale = Math.max(...items.map(i => i.imageScale ?? 1));
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .schedule-item {
   width: 100%;
+  /* border: 1px solid red; */
 }
 
 .schedule-row {
@@ -163,7 +180,6 @@ const maxImageScale = Math.max(...items.map(i => i.imageScale ?? 1));
 
 .schedule-time {
   font-weight: bold;
-  font-style: italic;
   font-size: 1.25em;
   margin-bottom: 0.2em;
 }
@@ -174,8 +190,11 @@ const maxImageScale = Math.max(...items.map(i => i.imageScale ?? 1));
   word-break: break-word;
 }
 /* Make the schedule section wider, matching the work in progress info section */
-:deep(.content) {
-  width: 95%;
-  max-width: 1100px;
+/* Switch to column on mobile */
+@media (max-width: 768px) {
+  :deep(.content) {
+    width: 95%;
+    max-width: 1100px;
+  }
 }
 </style>

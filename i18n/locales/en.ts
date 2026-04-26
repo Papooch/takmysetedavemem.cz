@@ -31,6 +31,7 @@ export const en: Translations = {
         ceremony: "Ceremony (the reason we're here)",
         lunch: "Lunch buffet (the reason you're here)",
         cake: "Coffee and cakes",
+        flower: "Wedding bouquet",
         quiz: "Wedding quiz",
         barbecue: "Barbecue",
         band: "Arrival of live band and first dance",
