@@ -88,7 +88,7 @@ const items = [
     imageScale: 1.1,
   },
   {
-    time: "15:00",
+    time: "15:30",
     text: scheduleContent.flower,
     // image: "/svg/pig-flower.svg",
     // imageScale: 1.1,
