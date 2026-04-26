@@ -37,3 +37,13 @@ h1 {
 h2 {
   font-size: 2.5rem;
 }
+
+/* Heart red: #ef4d4f */
+a, a:visited {
+  color: #ef4d4f;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: #c93032;
+}
