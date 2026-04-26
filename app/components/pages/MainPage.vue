@@ -160,12 +160,10 @@
 
       <!-- Main content -->
 
-      <PageSection
+      <ScheduleSection
         id="schedule"
-        :title="t.sections.schedule.title"
-      >
-        <PMultiline :rows="t.sections.schedule.contentRows" />
-      </PageSection>
+        :t="t"
+      />
       <PSpacer
         height="1"
         width="20%"
@@ -276,6 +274,7 @@
 </template>
 
 <script setup lang="ts">
+import ScheduleSection from "../molecules/ScheduleSection.vue";
 import type { Translations } from "~~/i18n";
 
 const props = defineProps<{ t: Translations }>();

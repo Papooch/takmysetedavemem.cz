@@ -13,6 +13,8 @@ const rendered = computed(() =>
     // **bold**
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     // [label](url or #anchor)
-    .replace(/\[(.+?)\]\((.+?)\)/g, "<a href=\"$2\">$1</a>"),
+    .replace(/\[(.+?)\]\((.+?)\)/g, "<a href=\"$2\">$1</a>")
+    // Preserve line breaks
+    .replace(/\n/g, "<br>"),
 );
 </script>
