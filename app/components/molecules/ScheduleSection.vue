@@ -131,7 +131,7 @@ const maxImageScale = Math.max(...items.map(i => i.imageScale ?? 1));
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .schedule-item {
@@ -192,9 +192,25 @@ const maxImageScale = Math.max(...items.map(i => i.imageScale ?? 1));
 /* Make the schedule section wider, matching the work in progress info section */
 /* Switch to column on mobile */
 @media (max-width: 768px) {
-  :deep(.content) {
-    width: 95%;
-    max-width: 1100px;
+
+  .schedule-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .schedule-img-col {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    justify-content: center;
+    margin-bottom: 0.2rem;
+  }
+  .schedule-right-col {
+    width: 100%;
+    align-items: center;
+  }
+  .schedule-text {
+    text-align: center;
   }
 }
 </style>

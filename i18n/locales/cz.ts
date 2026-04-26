@@ -34,7 +34,7 @@ export const cz = {
         barbecue: "Grilování",
         band: "Příjezd živé kapely\na první tanec",
         lateRefreshments: "Pozdní občerstvení",
-        end: "Konec oficiálního programu, ale zábava bude pokračovat až do rána",
+        end: "Konec oficiálního programu,\nale zábava bude pokračovat až do&nbsp;rána",
       },
     },
     confirmation: {
