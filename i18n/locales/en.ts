@@ -28,8 +28,8 @@ export const en: Translations = {
       note: "",
       content: {
         guestArrival: "Guest arrival",
-        ceremony: "Ceremony (the reason we're here)",
-        lunch: "Lunch buffet (the reason you're here)",
+        ceremony: "Ceremony\n(the reason we're here)",
+        lunch: "Lunch buffet\n(the reason you're here)",
         cake: "Wedding cake",
         flower: "Wedding bouquet",
         quiz: "Wedding quiz",

@@ -26,8 +26,8 @@ export const cz = {
       note: "",
       content: {
         guestArrival: "Trousení hostů",
-        ceremony: "Obřad (to proč jsme tu my)",
-        lunch: "Oběd formou rautu (to proč jste tu vy)",
+        ceremony: "Obřad\n(to proč jsme tu my)",
+        lunch: "Oběd formou rautu\n(to proč jste tu vy)",
         cake: "Svatební dort",
         flower: "Svatební kytinka",
         quiz: "Svatební kvíz",
