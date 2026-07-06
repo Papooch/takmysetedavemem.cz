@@ -82,19 +82,19 @@ const items = [
     imageScale: 0.8,
   },
   {
-    time: "15:00",
+    time: "14:50",
+    text: scheduleContent.flower,
+    // image: "/svg/pig-flower.svg",
+    // imageScale: 1.1,
+  },
+  {
+    time: "15:10",
     text: scheduleContent.cake,
     image: "/svg/pig-cake.svg",
     imageScale: 1.1,
   },
   {
     time: "15:30",
-    text: scheduleContent.flower,
-    // image: "/svg/pig-flower.svg",
-    // imageScale: 1.1,
-  },
-  {
-    time: "16:00",
     text: scheduleContent.quiz,
     image: undefined,
   },
