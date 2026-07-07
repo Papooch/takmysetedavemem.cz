@@ -49,7 +49,11 @@ export const cz = {
       showOnMap: "Zobrazit na mapě",
       contentRows: [
         "Na svatbu bude zejména pro hosty z Brna v sobotu zajištěna doprava - budeme se snažit co nejvíce eliminovat počet aut a současně všem umožnit požití alkoholu I odvoz ze svatby tak bude zajištěn.",
-        "Příjezd vlastním vozidlem bude umožněn pouze hostům, kteří mají zařízeno spinkání přímo na chatěnce. Pokud pojedete autem, zde je mapka, jak se tam dostat:",
+        "Večení a noční odvoz zařídí naši řidiči operativně:",
+        "**David Slavíček**: &nbsp;[**721 838 944**](tel:+420721838944)\n**Filip Raška**: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**776 518 297**](tel:+420776518297)",
+        "Neváhejte si je odchyit večer osobně nebo telefonicky, případně kontaktujte někoho ze svědků",
+        "Příjezd vlastním vozidlem bude umožněn pouze hostům, kteří mají zařízeno spinkání přímo na chatěnce, nebo jsme s nimi domluveni jinak",
+        "Pokud pojedete autem, zde je mapka, jak se tam dostat:",
       ],
     },
     accommodation: {
@@ -72,7 +76,7 @@ export const cz = {
       title: "Svědkové",
       contentRows: [
         "Svědčit nám budou naši drazí sourozenci - **Dalča** a **Monča**. Pokud budete mít nějaké dotazy během svatebního dne nebo budete potřebovat řešit cokoliv ohledně organizace (např. že pro nás máte nějaké překvapeníčko) či jiných detailů, obracejte se, prosíme, přímo na ně.",
-        "Kontakty doplníme.",
+        "**Dalibor Švanda**: &nbsp;&nbsp;[**720 531 771**](tel:+420720531771)\n**Monika Baršová**: &nbsp;[**733 269 347**](tel:+420733269347)",
       ],
     },
     gifts: {

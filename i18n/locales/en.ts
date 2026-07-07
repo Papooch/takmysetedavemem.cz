@@ -74,7 +74,7 @@ export const en: Translations = {
       title: "Witnesses",
       contentRows: [
         "Our witnesses will be our dear siblings - **Dalča** and **Monča**. If you have any questions during the wedding day or need to sort out anything regarding the organisation or other details, please reach out to them directly.",
-        "Contacts will be added.",
+        "**Dalibor Švanda**: &nbsp;&nbsp;[**720 531 771**](tel:+420720531771)\n**Monika Baršová**: &nbsp;[**733 269 347**](tel:+420733269347)",
       ],
     },
     gifts: {
