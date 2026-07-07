@@ -197,13 +197,13 @@
       >
         <PMultiline :rows="t.sections.arrival.contentRows" />
       </PageSection>
-      <iframe
-        style=""
-        src="https://mapy.com/s/horajohafe"
-        width="80%"
-        height="300"
-        frameborder="0"
-      />
+      <img
+        src="/svg/map.svg"
+        style="
+          max-width: 100%;
+          padding-top: 2rem;
+        "
+      >
       <PSpacer
         height="1"
         width="20%"
