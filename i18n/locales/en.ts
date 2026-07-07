@@ -48,6 +48,7 @@ export const en: Translations = {
     },
     arrival: {
       title: "Arrival and Transport",
+      showOnMap: "Show on map",
       contentRows: [
         "Transport will be provided for the wedding, especially for guests from Brno on Saturday - we will try to minimize the number of cars as much as possible while allowing everyone to consume alcohol. Return transport from the wedding will also be provided.",
         "Arrival by personal vehicle will only be allowed for guests who have arranged to sleep directly at the cottage. If you're coming by car, here's a map of how to get there:",

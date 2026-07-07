@@ -131,33 +131,6 @@
         margin="2"
       />
 
-      <!-- Work in progress info -->
-      <div>
-        <div
-          style="
-            position: relative;
-            padding: 0rem 0.5rem;
-            border: solid black 1.2mm;
-            border-radius: 5px;
-            background-color: #fffdf4;
-          "
-        >
-          <b>{{ t.misc.websiteUnderConstruction }}</b>
-        </div>
-        <img
-          style="
-            position: relative;
-            margin-top: -3rem;
-            padding-left: 5rem;
-            z-index: -5;
-          "
-          src="/svg/pig-password.svg"
-        >
-      </div>
-      <p>{{ t.misc.websiteUnderConstructionText }}</p>
-
-      <PSpacer margin="2" />
-
       <!-- Main content -->
 
       <ScheduleSection
@@ -201,9 +174,14 @@
         src="/svg/map.svg"
         style="
           max-width: 100%;
-          padding-top: 2rem;
+          padding: 1rem 0;
         "
       >
+      <a href="https://maps.app.goo.gl/hWSoGNVTni17ubYw7" target="_blank">
+        <button>
+          {{ t.sections.arrival.showOnMap  }}
+        </button>
+      </a>
       <PSpacer
         height="1"
         width="20%"
@@ -461,6 +439,10 @@ useSeoMeta({
 
 img {
   max-width: 200px;
+}
+
+button {
+  padding: 0 0.5rem;
 }
 
 .heart-container {

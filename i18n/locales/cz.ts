@@ -46,6 +46,7 @@ export const cz = {
     },
     arrival: {
       title: "Příjezd a doprava",
+      showOnMap: "Zobrazit na mapě",
       contentRows: [
         "Na svatbu bude zejména pro hosty z Brna v sobotu zajištěna doprava - budeme se snažit co nejvíce eliminovat počet aut a současně všem umožnit požití alkoholu I odvoz ze svatby tak bude zajištěn.",
         "Příjezd vlastním vozidlem bude umožněn pouze hostům, kteří mají zařízeno spinkání přímo na chatěnce. Pokud pojedete autem, zde je mapka, jak se tam dostat:",
