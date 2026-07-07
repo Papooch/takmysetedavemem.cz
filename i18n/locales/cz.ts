@@ -24,6 +24,7 @@ export const cz = {
     schedule: {
       title: "Harmonogram",
       note: "",
+      footer: "Mimo hlavní program budou v areálu k dispozici různé zahradní hry a odpočívátka. Pokud by toho na vás bylo moc, můžete se projít načerpat energii do okolní přírody.",
       content: {
         guestArrival: "Trousení hostů",
         ceremony: "Obřad\n(to proč jsme tu my)",

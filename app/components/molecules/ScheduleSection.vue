@@ -45,6 +45,9 @@
           </div>
         </div>
       </div>
+      <div>
+        {{ t.sections.schedule.footer  }}
+      </div>
     </div>
   </PageSection>
 </template>
