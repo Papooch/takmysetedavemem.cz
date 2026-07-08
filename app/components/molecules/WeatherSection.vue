@@ -2,22 +2,24 @@
   <div class="weather-widget">
     <p class="weather-lead">{{ props.t.sections.weather.lead }}</p>
     <noscript>{{ props.t.sections.weather.noscript }}</noscript>
-    <div v-if="pending" class="weather-status">…</div>
-    <div v-else-if="error" class="weather-status">⚠️</div>
-    <PStack v-else-if="weather" alignment="center" gap="1">
-      <div
-        v-for="(date, i) in weather.daily.time.slice(0, daysToWedding)"
-        :key="date"
-        class="weather-day"
-        :class="{ 'is-wedding-day': date === '2026-07-11' }"
-      >
-        <span class="day-name">{{ dayName(date) }}</span>
-        <img :src="wmoIcon(weather.hourly.weather_code[i * 24 + 12]!)" class="day-icon" alt="" />
-        <span class="day-high">{{ Math.round(weather.daily.temperature_2m_max[i]!) }}°</span>
-        <span class="day-low">{{ Math.round(weather.daily.temperature_2m_min[i]!) }}°</span>
-        <img src="/svg/heart.svg" class="wedding-marker" :style="{ visibility: date === '2026-07-11' ? 'visible' : 'hidden' }" alt="" />
-      </div>
-    </PStack>
+    <ClientOnly>
+      <div v-if="pending" class="weather-status">…</div>
+      <div v-else-if="error" class="weather-status">⚠️</div>
+      <PStack v-else-if="weather" alignment="center" gap="1">
+        <div
+          v-for="(date, i) in weather.daily.time.slice(0, daysToWedding)"
+          :key="date"
+          class="weather-day"
+          :class="{ 'is-wedding-day': date === '2026-07-11' }"
+        >
+          <span class="day-name">{{ dayName(date) }}</span>
+          <img :src="wmoIcon(weather.hourly.weather_code[i * 24 + 12]!)" class="day-icon" alt="" />
+          <span class="day-high">{{ Math.round(weather.daily.temperature_2m_max[i]!) }}°</span>
+          <span class="day-low">{{ Math.round(weather.daily.temperature_2m_min[i]!) }}°</span>
+          <img src="/svg/heart.svg" class="wedding-marker" :style="{ visibility: date === '2026-07-11' ? 'visible' : 'hidden' }" alt="" />
+        </div>
+      </PStack>
+    </ClientOnly>
   </div>
 </template>
 
@@ -43,6 +45,7 @@ const daysToWedding = Math.ceil((weddingDay.getTime() - Date.now()) / (1000 * 60
 const { data: weather, pending, error } = useFetch<OpenMeteoResponse>(
   'https://api.open-meteo.com/v1/forecast',
   {
+    server: false,
     query: {
       latitude: 49.29,
       longitude: 16.58,
