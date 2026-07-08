@@ -143,6 +143,17 @@
         margin="2"
       />
       <PageSection
+        id="weather"
+        :title="t.sections.weather.title"
+      >
+        <WeatherSection :t="t" />
+      </PageSection>
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="2"
+      />
+      <PageSection
         id="confirmation"
         :title="t.sections.confirmation.title"
       >
@@ -262,6 +273,7 @@ const isMobileMenuOpen = ref(false);
 const menuSections = computed(() => [
   { id: "introduction", label: props.t.sections.introduction.title },
   { id: "schedule", label: props.t.sections.schedule.title },
+  { id: "weather", label: props.t.sections.weather.title },
   { id: "confirmation", label: props.t.sections.confirmation.title },
   { id: "arrival", label: props.t.sections.arrival.title },
   { id: "accommodation", label: props.t.sections.accommodation.title },

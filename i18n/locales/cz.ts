@@ -25,10 +25,7 @@ export const cz = {
       title: "Harmonogram",
       note: "",
       footer: "Mimo hlavní program budou v areálu k dispozici různé zahradní hry a odpočívátka. Pokud by toho na vás bylo moc, můžete se projít načerpat energii do okolní přírody.",
-      weatherForecast: {
-        text: "Předpověď počasí",
-        linkLocale: "cs",
-      },
+
       content: {
         guestArrival: "Trousení hostů",
         ceremony: "Obřad\n(to proč jsme tu my)",
@@ -89,6 +86,10 @@ export const cz = {
       contentRows: [
         "Největším dárečkem je pro nás samozřejmě vaše účast. Ale kromě vás máme rádi i penízky. A rádi bychom zase vyrazili poznávat svět.",
       ],
+    },
+    weather: {
+      title: "Předpověď počasí",
+      linkLocale: "cs",
     },
   },
 

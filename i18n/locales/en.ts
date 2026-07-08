@@ -26,10 +26,6 @@ export const en: Translations = {
     schedule: {
       title: "Schedule",
       footer: "In addition to the main program, there will be various outdoor games and resting areas available on the grounds. If it all gets to be too much for you, you can take a stroll to recharge your energy in the surrounding nature.",
-      weatherForecast: {
-        text: "Weather Forecast",
-        linkLocale: "en",
-      },
       note: "",
       content: {
         guestArrival: "Guest arrival",
@@ -87,6 +83,10 @@ export const en: Translations = {
       contentRows: [
         "The greatest gift is of course your attendance. But besides you, we also like money. And we'd love to explore the world again.",
       ],
+    },
+    weather: {
+      title: "Weather Forecast",
+      linkLocale: "en",
     },
   },
 

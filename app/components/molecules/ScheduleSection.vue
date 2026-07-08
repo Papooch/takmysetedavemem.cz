@@ -48,7 +48,6 @@
       <div>
         {{ t.sections.schedule.footer  }}
       </div>
-      <WeatherSection :t="props.t" />
     </div>
   </PageSection>
 </template>
