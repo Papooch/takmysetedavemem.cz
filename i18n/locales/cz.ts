@@ -12,6 +12,7 @@ export const cz = {
   sections: {
     introduction: {
       title: "Vítejte",
+      shortTitle: "Vítejte",
       contentRows: [
         "Naši milí svatebčané, vítejte na našem svatebním webu!",
         "Je nám velkou ctí pozvat vás na naši svatbu, která přichází po téměř 11 letech našeho vztahu - ano, dali jsme si na čas, ale lepší někdy než nikdy.",
@@ -23,12 +24,10 @@ export const cz = {
     },
     schedule: {
       title: "Harmonogram",
+      shortTitle: "Harmonogram",
       note: "",
       footer: "Mimo hlavní program budou v areálu k dispozici různé zahradní hry a odpočívátka. Pokud by toho na vás bylo moc, můžete se projít načerpat energii do okolní přírody.",
-      weatherForecast: {
-        text: "Předpověď počasí",
-        linkLocale: "cs",
-      },
+
       content: {
         guestArrival: "Trousení hostů",
         ceremony: "Obřad\n(to proč jsme tu my)",
@@ -44,6 +43,7 @@ export const cz = {
     },
     confirmation: {
       title: "Potvrzení účasti",
+      shortTitle: "Potvrzení",
       contentRows: [
         "Prosíme, vypište počet osob a jednotlivá jména těch, jejichž účast potvrzujete.",
         "Kapacita chaty je poměrně omezená, proto +1, které nebyly uvedeny na obálce pozvánky, bohužel nejsou možné. Děkujeme za pochopení.",
@@ -51,6 +51,7 @@ export const cz = {
     },
     arrival: {
       title: "Příjezd a doprava",
+      shortTitle: "Doprava",
       showOnMap: "Zobrazit na mapě",
       contentRows: [
         "Na svatbu bude zejména pro hosty z Brna v sobotu zajištěna doprava - budeme se snažit co nejvíce eliminovat počet aut a současně všem umožnit požití alkoholu.",
@@ -63,6 +64,7 @@ export const cz = {
     },
     accommodation: {
       title: "Spinkání",
+      shortTitle: "Spinkání",
       contentRows: [
         "Na chatěnce je bohužel omezený počet místeček na spinkání, proto byla v rámci ubytování dána přednost těm, kteří nebydlí přímo v Brně či blízkém okolí, potažmo těm, kteří nám budou svatbu pomáhat chystat a uklízet. ",
         "Rodinní příslušníci jsou v drtivé většině přímo z Brna, případně těm, kteří bydlí o něco dál, bude přístřeší poskytnuto rodinou.",
@@ -71,6 +73,7 @@ export const cz = {
     },
     dressCode: {
       title: "Šatěnky a tak",
+      shortTitle: "Šatěnky",
       contentRows: [
         "Při výběru róby berte, prosíme, na vědomí, že celý den strávíme na chatě v lese.",
         "Muži, můžete s klidem nechat kravaty i motýlky doma, tolik formálnosti nevyžadujeme. Ženy, podpatky berte jen pokud rády kypříte trávník, jinak je nedoporučujeme.",
@@ -79,6 +82,7 @@ export const cz = {
     },
     witnesses: {
       title: "Svědkové",
+      shortTitle: "Svědci",
       contentRows: [
         "Svědčit nám budou naši drazí sourozenci - **Dalča** a **Monča**. Pokud budete mít nějaké dotazy během svatebního dne nebo budete potřebovat řešit cokoliv ohledně organizace (např. že pro nás máte nějaké překvapeníčko) či jiných detailů, obracejte se, prosíme, přímo na ně.",
         "**Dalibor Švanda**: &nbsp;&nbsp;[**720 531 771**](tel:+420720531771)\n**Monika Baršová**: &nbsp;[**733 269 347**](tel:+420733269347)",
@@ -86,9 +90,17 @@ export const cz = {
     },
     gifts: {
       title: "Dárečky",
+      shortTitle: "Dárečky",
       contentRows: [
         "Největším dárečkem je pro nás samozřejmě vaše účast. Ale kromě vás máme rádi i penízky. A rádi bychom zase vyrazili poznávat svět.",
       ],
+    },
+    weather: {
+      title: "Předpověď počasí",
+      shortTitle: "Počasí",
+      lead: "Přeci jen asi chcete vědět, co si vzít na sebe. Tady je předpověď pro Babí lom na nejbližší dny.",
+      noscript: "Předpověď počasí vyžaduje JavaScript, ale prý by mělo být hezky.",
+      linkLocale: "cs",
     },
   },
 
