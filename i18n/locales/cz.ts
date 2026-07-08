@@ -98,7 +98,7 @@ export const cz = {
     weather: {
       title: "Předpověď počasí",
       shortTitle: "Počasí",
-      lead: "Přeci jen asi chcete vědět, co si vzít na sebe. Tady je předpověď pro Babí lom na nejbližší dny.",
+      lead: "Výběr oblečení uzpůsobte i podle počasí. Tady je předpověď pro Babí lom na nejbližší dny.",
       noscript: "Předpověď počasí vyžaduje JavaScript, ale prý by mělo být hezky.",
       linkLocale: "cs",
     },

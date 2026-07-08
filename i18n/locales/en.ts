@@ -95,7 +95,7 @@ export const en: Translations = {
     weather: {
       title: "Weather Forecast",
       shortTitle: "Weather",
-      lead: "You'll want to know what to wear, after all. Here's the forecast for Babí lom for the coming days.",
+      lead: "Choose your clothes according to the weather. Here's the forecast for Babí lom for the coming days.",
       noscript: "The weather forecast requires JavaScript, but word has it the weather will be nice.",
       linkLocale: "en",
     },
