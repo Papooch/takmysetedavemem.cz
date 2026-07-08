@@ -1,5 +1,7 @@
 <template>
   <div class="weather-widget">
+    <p class="weather-lead">{{ props.t.sections.weather.lead }}</p>
+    <noscript>{{ props.t.sections.weather.noscript }}</noscript>
     <div v-if="pending" class="weather-status">…</div>
     <div v-else-if="error" class="weather-status">⚠️</div>
     <PStack v-else-if="weather" alignment="center" gap="1">
@@ -79,6 +81,10 @@ function wmoIcon(code: number): string {
   box-sizing: border-box;
   padding: 0;
   border-radius: 0.5rem;
+}
+
+.weather-lead {
+  margin: 0 0 1rem;
 }
 
 .weather-day {

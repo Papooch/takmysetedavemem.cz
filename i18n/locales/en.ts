@@ -14,6 +14,7 @@ export const en: Translations = {
   sections: {
     introduction: {
       title: "Welcome",
+      shortTitle: "Welcome",
       contentRows: [
         "Dear wedding guests, welcome to our wedding website!",
         "It is a great honour for us to invite you to our wedding, which comes after almost 11 years of our relationship - yes, we took our time, but better late than never.",
@@ -25,6 +26,7 @@ export const en: Translations = {
     },
     schedule: {
       title: "Schedule",
+      shortTitle: "Schedule",
       footer: "In addition to the main program, there will be various outdoor games and resting areas available on the grounds. If it all gets to be too much for you, you can take a stroll to recharge your energy in the surrounding nature.",
       note: "",
       content: {
@@ -42,6 +44,7 @@ export const en: Translations = {
     },
     confirmation: {
       title: "Confirmation of Attendance",
+      shortTitle: "Confirm",
       contentRows: [
         "Please list the number of people and individual names of those whose attendance you are confirming.",
         "The cottage capacity is quite limited, therefore +1s that were not listed on the invitation envelope are unfortunately not possible. Thank you for understanding.",
@@ -49,6 +52,7 @@ export const en: Translations = {
     },
     arrival: {
       title: "Arrival and Transport",
+      shortTitle: "Getting There",
       showOnMap: "Show on map",
       contentRows: [
         "Transport will be provided for the wedding, especially for guests from Brno on Saturday - we will try to minimize the number of cars as much as possible while allowing everyone to consume alcohol. Return transport from the wedding will also be provided.",
@@ -57,6 +61,7 @@ export const en: Translations = {
     },
     accommodation: {
       title: "Sleeping Over",
+      shortTitle: "Stay",
       contentRows: [
         "There is unfortunately a limited number of sleeping spots at the cottage, so accommodation priority was given to those who don't live directly in Brno or the nearby area, or those who will help us prepare and clean up the wedding.",
         "Family members are mostly from Brno, or those who live a bit further will be provided shelter by family.",
@@ -65,6 +70,7 @@ export const en: Translations = {
     },
     dressCode: {
       title: "Dress Code",
+      shortTitle: "Dress Code",
       contentRows: [
         "When choosing your outfit, please keep in mind that we'll spend the whole day at a cottage in the forest.",
         "Men, feel free to leave ties and bow ties at home, we don't require that much formality. Women, only wear heels if you enjoy aerating the lawn, otherwise we don't recommend them.",
@@ -73,6 +79,7 @@ export const en: Translations = {
     },
     witnesses: {
       title: "Witnesses",
+      shortTitle: "Witnesses",
       contentRows: [
         "Our witnesses will be our dear siblings - **Dalča** and **Monča**. If you have any questions during the wedding day or need to sort out anything regarding the organisation or other details, please reach out to them directly.",
         "**Dalibor Švanda**: &nbsp;&nbsp;[**720 531 771**](tel:+420720531771)\n**Monika Baršová**: &nbsp;[**733 269 347**](tel:+420733269347)",
@@ -80,12 +87,16 @@ export const en: Translations = {
     },
     gifts: {
       title: "Gifts",
+      shortTitle: "Gifts",
       contentRows: [
         "The greatest gift is of course your attendance. But besides you, we also like money. And we'd love to explore the world again.",
       ],
     },
     weather: {
       title: "Weather Forecast",
+      shortTitle: "Weather",
+      lead: "You'll want to know what to wear, after all. Here's the forecast for Babí lom for the coming days.",
+      noscript: "The weather forecast requires JavaScript, but word has it the weather will be nice.",
       linkLocale: "en",
     },
   },

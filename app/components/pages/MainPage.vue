@@ -143,6 +143,17 @@
         margin="2"
       />
       <PageSection
+        id="dressCode"
+        :title="t.sections.dressCode.title"
+      >
+        <PMultiline :rows="t.sections.dressCode.contentRows" />
+      </PageSection>
+      <PSpacer
+        height="1"
+        width="20%"
+        margin="2"
+      />
+      <PageSection
         id="weather"
         :title="t.sections.weather.title"
       >
@@ -213,17 +224,6 @@
         width="20%"
         margin="2"
       />
-      <PageSection
-        id="dressCode"
-        :title="t.sections.dressCode.title"
-      >
-        <PMultiline :rows="t.sections.dressCode.contentRows" />
-      </PageSection>
-      <PSpacer
-        height="1"
-        width="20%"
-        margin="2"
-      />
 
       <PageSection
         id="witnesses"
@@ -271,15 +271,16 @@ const props = defineProps<{ t: Translations }>();
 const isMobileMenuOpen = ref(false);
 
 const menuSections = computed(() => [
-  { id: "introduction", label: props.t.sections.introduction.title },
-  { id: "schedule", label: props.t.sections.schedule.title },
-  { id: "weather", label: props.t.sections.weather.title },
-  { id: "confirmation", label: props.t.sections.confirmation.title },
-  { id: "arrival", label: props.t.sections.arrival.title },
-  { id: "accommodation", label: props.t.sections.accommodation.title },
-  { id: "dressCode", label: props.t.sections.dressCode.title },
-  { id: "witnesses", label: props.t.sections.witnesses.title },
-  { id: "gifts", label: props.t.sections.gifts.title },
+  { id: "introduction", label: props.t.sections.introduction.shortTitle },
+  { id: "schedule", label: props.t.sections.schedule.shortTitle },
+  { id: "dressCode", label: props.t.sections.dressCode.shortTitle },
+  { id: "weather", label: props.t.sections.weather.shortTitle },
+  { id: "confirmation", label: props.t.sections.confirmation.shortTitle },
+  { id: "arrival", label: props.t.sections.arrival.shortTitle },
+  { id: "accommodation", label: props.t.sections.accommodation.shortTitle },
+  { id: "dressCode", label: props.t.sections.dressCode.shortTitle },
+  { id: "witnesses", label: props.t.sections.witnesses.shortTitle },
+  { id: "gifts", label: props.t.sections.gifts.shortTitle },
 ]);
 
 useHead({
