@@ -18,7 +18,7 @@ export const cz = {
         "Těšíme se, že s námi oslavíte tento výjimečný den plný prasátek, roztomilých chvil a dobrého jídla - co víc si v letní den přát?",
         "Na této stránce byste měli nalézt všechny důležité informace. Prosíme vás především o [potvrzení účasti](#confirmation). Pokud by vám nicméně nebylo cokoliv jasné, obraťte se přímo na nás, nebo v blízkosti svatby na naše [svědky](#witnesses).",
         "Budeme se těšit!",
-        "Verunka a  Ondrášek",
+        "Verunka a Ondrášek",
       ],
     },
     schedule: {
@@ -54,9 +54,9 @@ export const cz = {
       showOnMap: "Zobrazit na mapě",
       contentRows: [
         "Na svatbu bude zejména pro hosty z Brna v sobotu zajištěna doprava - budeme se snažit co nejvíce eliminovat počet aut a současně všem umožnit požití alkoholu.",
-        "Večení a noční odvoz zařídí naši řidiči operativně:",
+        "Večerní a noční odvoz zařídí naši řidiči operativně:",
         "**David Slavíček**: &nbsp;[**721 838 944**](tel:+420721838944)\n**Filip Raška**: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**776 518 297**](tel:+420776518297)",
-        "Neváhejte si je odchyit večer osobně nebo telefonicky, případně kontaktujte někoho ze svědků.",
+        "Neváhejte si je odchytit večer osobně nebo telefonicky, případně kontaktujte někoho ze svědků.",
         "Příjezd vlastním vozidlem bude umožněn pouze hostům, kteří mají zařízeno spinkání přímo na chatěnce, nebo jsme s nimi domluveni jinak.",
         "Pokud pojedete autem, zde je mapka, jak se tam dostat:",
       ],
