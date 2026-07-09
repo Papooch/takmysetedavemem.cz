@@ -87,8 +87,8 @@ const items = [
   {
     time: "14:50",
     text: scheduleContent.flower,
-    // image: "/svg/pig-flower.svg",
-    // imageScale: 1.1,
+    image: "/svg/pig-flower.svg",
+    imageScale: 1.2,
   },
   {
     time: "15:10",
@@ -99,7 +99,8 @@ const items = [
   {
     time: "15:30",
     text: scheduleContent.quiz,
-    image: undefined,
+    image: "/svg/pig-quiz.svg",
+    imageScale: 1.3,
   },
   {
     time: "17:00",
@@ -116,7 +117,8 @@ const items = [
   {
     time: "21:00",
     text: scheduleContent.lateRefreshments,
-    image: undefined,
+    image: "/svg/pig-refreshments.svg",
+    imageScale: 1,
   },
   {
     time: "22:00",
